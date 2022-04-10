@@ -1,0 +1,25 @@
+#端口、数据源、thymeleaf、mybatis、表单转换
+server:
+  port: 9981
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/laydb?serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  thymeleaf:
+    cache: false
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.example.*.*.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
