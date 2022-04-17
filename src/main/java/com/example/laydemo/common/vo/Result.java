@@ -23,7 +23,11 @@ public class Result<T> {
 
 
     public static Result<Object> success(){
-        return new Result(0, "message", null, null);
+        return new Result(0, "success", null, null);
+    }
+
+    public static Result<Object> success(Object data,Long count){
+        return new Result(0, "success", data, count);
     }
 
     public static Result<Object> fail(){
