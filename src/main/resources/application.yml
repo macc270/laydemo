@@ -1,6 +1,7 @@
 #端口、数据源、thymeleaf、mybatis、表单转换
 server:
   port: 9981
+
 spring:
   datasource:
     username: root

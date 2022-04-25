@@ -4,16 +4,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.laydemo.emp.mapper.EmpMapper">
     <!--查询员工列表-->
-    <select id="getEmpList" parameterType="com.example.laydemo.common.vo.EmpQuery" resultType="Emp">
+    <select id="getEmpList" parameterType="com.example.laydemo.common.vo.EmpQuery" resultType="com.example.laydemo.emp.entity.Emp">
         select * from emp
         <!--select * from emp where name like '%张%'-->
-        <include refid="getEmpListWhere"></include>
+        <include refid="getEmpListWhere"/>
         limit #{start},#{limit}
     </select>
     <!--统计员工数据量-->
     <select id="countEmpList" parameterType="com.example.laydemo.common.vo.EmpQuery" resultType="Long">
         select count(1) from emp
-        <include refid="getEmpListWhere"></include>
+        <include refid="getEmpListWhere"/>
     </select>
 
     <sql id="getEmpListWhere">

@@ -34,6 +34,12 @@
             <version>2.14.1</version>
         </dependency>
 
+        <!--验证码-->
+        <dependency>
+            <groupId>com.github.whvcse</groupId>
+            <artifactId>easy-captcha</artifactId>
+            <version>1.6.2</version>
+        </dependency>
         <!--mybatis-->
         <dependency>
             <groupId>org.mybatis</groupId>
