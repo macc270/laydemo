@@ -11,13 +11,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@ResponseBody
+
 @RequestMapping("/emp")
 public class EmpController {
 
     @Autowired
     private EmpService empService;
 
+    @GetMapping("")
+    public String toEmpListUI(){
+        return "emp/empList";
+    }
+
+    @ResponseBody
     @GetMapping("/list")
     public Result<Object> getEmpList(EmpQuery param) {
         List<Emp> list = empService.getEmpList(param);

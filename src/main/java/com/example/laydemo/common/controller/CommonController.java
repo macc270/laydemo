@@ -21,6 +21,11 @@ public class CommonController {
         return "index";
     }
 
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "welcome";
+    }
+
     @RequestMapping("/captcha")
     public void captcha(HttpServletRequest request, HttpServletResponse response) throws Exception {
         CaptchaUtil.out(request, response);

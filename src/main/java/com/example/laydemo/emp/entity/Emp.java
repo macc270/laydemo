@@ -13,5 +13,6 @@ public class Emp implements Serializable {
     private Integer age;
     private Double sal;
     private Date birthday;
+    private String address;
     private Integer deptId;
 }

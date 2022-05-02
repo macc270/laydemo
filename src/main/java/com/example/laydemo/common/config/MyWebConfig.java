@@ -28,7 +28,11 @@ public class MyWebConfig implements WebMvcConfigurer {
                 "/layui/**",
                 "/lib/**",
                 "/webjars/**",
-                "captcha");
+                "/captcha",
+                "/api/**",
+                "/css/**",
+                "/js/**",
+                "/images/**");
     }
 
 }

@@ -17,6 +17,10 @@ spring:
       filter:
         enabled: true
 
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: GMT+8
+
 
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
@@ -25,3 +29,6 @@ mybatis:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+logging:
+  level:
+    com.example: debug
