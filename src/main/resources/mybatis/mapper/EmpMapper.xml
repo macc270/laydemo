@@ -23,12 +23,12 @@
             </if>
             <if test="startDate != null">
                 <![CDATA[
-                birthday>=#{startDate}
+                and birthday>=#{startDate}
                 ]]>
             </if>
             <if test="endDate != null">
                 <![CDATA[
-                birthday <= #{endDate}
+                and birthday <= #{endDate}
                 ]]>
             </if>
         </where>
