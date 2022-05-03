@@ -16,14 +16,18 @@ public class Result<T> {
         this.count = count;
     }
 
-    private Integer code;
-    private String message;
-    private T data;
-    private Long count;
+    private Integer code;//返回码，0成功
+    private String message;//返回描述
+    private T data;//返回数据
+    private Long count;//分页查询的总记录时
 
 
     public static Result<Object> success(){
         return new Result(0, "success", null, null);
+    }
+
+    public static Result<Object> success(String message){
+        return new Result(0, message, null, null);
     }
 
     public static Result<Object> success(Object data,Long count){
