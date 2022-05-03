@@ -116,9 +116,10 @@
                     }else {
                         $("#btn-submit").removeAttr("disabled", "disabled").removeClass("layui-btn-disabled")
                         //失败则提示错误消息，窗口不关闭
-                        layer.msg("新增失败，请联系管理员", {
+                        layer.alert(response.message, {
                             icon: 2,
-                            anim: 6
+                            anim: 6,
+                            title: "操作失败"
                         });
                     }
                 })
